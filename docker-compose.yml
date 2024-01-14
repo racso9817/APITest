@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  express-api:
+    build: ./express-api
+    ports:
+      - "3000:3000"
+
+  flask-api:
+    build: ./flask-api
+    ports:
+      - "5000:5000"
+
+  angular-client:
+    build: ./test
+    ports:
+      - "80:80"
