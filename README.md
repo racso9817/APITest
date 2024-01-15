@@ -13,7 +13,8 @@
 3. Entrar a http://localhost:80
 4. Las credenciales son usuario: admin, password: admin
 5. Las credenciales para probar el link de pago de Paypal son usuario: sb-t90qf29275081@personal.example.com contraseña: dOp@a8=9
-6. Es importante probar el proyecto solo dentro del localhost ya que las rutas de las APIs están configuradas para funcionar dentro del entorno local
+6. Leer Disclaimer
+7. Es importante probar el proyecto solo dentro del localhost ya que las rutas de las APIs están configuradas para funcionar dentro del entorno local
 
 ## Disclaimer
 - Debido a conflictos con la librería signpdf para firmar PDFs con certificados P12, encontré dificultades debido al tiempo para hacerla funcional sin errores. Tengo un caso de éxito que es con el archivo ```attachment_1__pdf-prueba.pdf``` que se encuentra dentro del proyecto, el cual es firmado exitosamente, pero con una firma electrónica invisible. Esto se puede comprobar debido a que el archivo original y el peso del archivo firmado son diferentes. El ```pdf-firmado.pdf``` pesa más que el archivo original.
