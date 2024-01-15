@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<div class="h-screen flex justify-center items-center bg-gray-100 dark:bg-gray-800">
+    <div class="w-full max-w-xl">
+        @if(form){
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white dark:bg-gray-600 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="pb-4">
+                    <h1 class="text-gray-700 text-2xl dark:text-white">Generador de links de Pago (PayPal)</h1>
+                </div>                
+                <div class="mb-4">
+                    <label class="block text-gray-700 dark:text-white text-sm font-bold mb-2" for="validity-time">
+                        Tiempo de validez en minutos
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
+                        [formControl]="validityTimeControl"
+                        id="validity-time" type="text" (input)="verifyNumberInput($event)" placeholder="Tiempo de validez en minutos">
+                </div>
+                <div class="mb-4">
+                    <button 
+                        [disabled]="!form.valid"
+                        class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">Generar Link de Pago</button>
+                </div>
+                @if(payment_link != null && validity){
+                    <div class="mb-4">                    
+                        <a class="text-black dark:text-white hover:underline" href="{{payment_link}}" target="_blank">{{payment_link}}</a>
+                    </div>
+                }
+                @if(!validity){
+                    <div class="mb-4">
+                        <p class="text-error">Su link de pago es inválido. Genere uno nuevo</p>
+                    </div>
+                }
+            </form>
+        }
+    </div>
+</div>
