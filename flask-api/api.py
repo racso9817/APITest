@@ -15,9 +15,9 @@ app.config["JWT_SECRET_KEY"] = "hola2"
 jwt = JWTManager(app)
 
 paypalrestsdk.configure({
-    "mode": "sandbox", # Usa "sandbox" para pruebas o "live" para producción
-    "client_id": "AVGyXXPw8f7-Z64rqlif-4kpk9uQ-x5INXE5rcoC6ojCd0sXPIVOB7Oj78-BNgRnXP4n9r-upQeketqA",
-    "client_secret": "EIjVSlmsmpEOqwsk2YTTXdi5_HEyvoH6qYt6HbDoeD9d2s2VwjmmlcB3p2jML6T6eg89FE5TPLJF4yja"
+    "mode": "sandbox",
+    "client_id": "",
+    "client_secret": ""
 })
 
 # global variables username & password
